@@ -1,12 +1,10 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
-}
+
 
 footer {
     background: #30303c;
     padding: 1.75rem 1rem;
     color: #fff;
+     font-size: var(--body-font-size-xs);
 }
 
 footer {
