@@ -210,6 +210,18 @@ button.secondary {
   color: var(--text-color);
 }
 
+h5 a:any-link {
+  color: var( --dark-color);
+  text-decoration: underline;
+}
+
+h5 a.button {
+  all: unset;           /* removes button styles */
+  color: var( --dark-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 main img {
   max-width: 100%;
   width: auto;
