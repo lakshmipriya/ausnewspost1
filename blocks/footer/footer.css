@@ -3,6 +3,30 @@ footer {
   font-size: var(--body-font-size-xs);
 }
 
+footer {
+    background: #30303c;
+    padding: 1.75rem 1rem;
+    color: #fff;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer img {
+    max-width: 5.75rem;
+    margin: 0 auto 1rem;
+}
+
+footer p {
+    width: 100%;
+    max-width: 43.75rem;
+    text-align: center;
+    font-size: 75%;
+}
+
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
