@@ -10,7 +10,7 @@ footer {
 footer {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 footer img {
