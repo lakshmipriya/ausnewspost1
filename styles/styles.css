@@ -268,7 +268,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1000px;
+  max-width: 95%;
   margin: auto;
   padding: 0 24px;
 }
