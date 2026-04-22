@@ -46,8 +46,9 @@ footer .columns > div:not(.columns-img-col) {
 /* Text */
 footer p {
   margin: 0;
-  font-size: 14px;                 /* ✅ matches original */
+  font-size: 12px;                 /* ✅ matches original */
   line-height: 1.6;
+  text-align: left;
 }
 
 /* Desktop spacing */
