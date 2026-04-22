@@ -7,7 +7,7 @@ footer {
 
 footer {
     display: flex;
-    align-items: center;
+    align-items: left;
     /* flex-wrap: wrap; */
 }
 
@@ -19,7 +19,7 @@ footer img {
 footer p {
     width: 100%;
     max-width: 43.75rem;
-    text-align: center;
+    text-align: left;
     font-size: 75%;
 }
 
@@ -55,7 +55,7 @@ footer .footer p {
   padding: 24px 32px;
 
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 24px;
 }
 
