@@ -2,7 +2,7 @@ footer {
     background: #30303c;
     padding: 0px;
     color: #fff;
-     font-size: var(--body-font-size-s);
+     font-size: var(--body-font-size-xs);
 }
 
 footer {
@@ -18,7 +18,7 @@ footer img {
 
 footer p {
     width: 100%;
-    max-width: 43.75rem;
+    max-width: 45.75rem;
     text-align: left;
     font-size: 75%;
 }
