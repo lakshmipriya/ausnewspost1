@@ -18,7 +18,7 @@ footer img {
 
 footer p {
     width: 100%;
-    max-width: 45.75rem;
+    max-width: none;
     text-align: left;
     font-size: 75%;
 }
@@ -78,7 +78,7 @@ footer .footer p {
 
 .footer-wrapper p {
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.6;
   color: #ffffff;
 }
