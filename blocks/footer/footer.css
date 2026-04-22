@@ -1,65 +1,75 @@
-/* ---------------- Base footer ---------------- */
+/* ===== Base footer ===== */
 footer {
   background: #ffffff;
   color: #30303c;
   font-size: var(--body-font-size-xs);
 }
 
-/* Constrain footer content */
-footer .footer > div {
-  max-width: 1240px;
-  margin: 0 auto;
-  box-sizing: border-box;
+/* ===== Shared row container ===== */
+footer .footer-block > .section {
+  width: 100%;
 }
 
-/* ---------------- COPYRIGHT ROW ---------------- */
-/* FIRST columns block stays normal */
-footer .columns:first-of-type {
+/* ===================================================== */
+/* ROW 1 – COPYRIGHT + SOCIAL (WHITE BACKGROUND)          */
+/* ===================================================== */
+footer .footer-block > .section:first-of-type {
+  background: #ffffff;
+}
+
+footer .footer-block > .section:first-of-type .columns-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
   padding: 24px;
   text-align: center;
+}
+
+footer .footer-block > .section:first-of-type p {
+  margin: 0;
   font-size: 12px;
 }
 
-footer .columns:first-of-type a {
+footer .footer-block > .section:first-of-type a {
   color: #d40000;
   text-decoration: underline;
 }
 
-/* ---------------- ACKNOWLEDGEMENT ROW ---------------- */
-/* SECOND columns block — force layout */
-footer .columns:nth-of-type(2) {
-  background: #30303c;
+/* ===================================================== */
+/* ROW 2 – ACKNOWLEDGEMENT (DARK BACKGROUND)              */
+/* ===================================================== */
+footer .footer-block > .section:nth-of-type(2) {
+  background: #30303c; /* ✅ FULL ROW DARK */
 }
 
-footer .columns:nth-of-type(2) > div {
+footer .footer-block > .section:nth-of-type(2) .columns-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
   padding: 40px 24px;
 }
 
-footer .columns:nth-of-type(2) .columns {
+/* Layout logo + text horizontally */
+footer .footer-block > .section:nth-of-type(2) .columns {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 24px;
 }
 
-/* Logo column (even though markup says 1-col) */
-footer .columns:nth-of-type(2) .columns-img-col {
+/* Logo column */
+footer .footer-block > .section:nth-of-type(2) .columns-img-col {
   flex: 0 0 72px;
   max-width: 72px;
   display: flex;
   align-items: center;
 }
 
-/* Lock logo size */
-footer .columns:nth-of-type(2) img {
+footer .footer-block > .section:nth-of-type(2) .columns-img-col img {
   max-width: 72px;
   height: auto;
-  width: auto;
   display: block;
 }
 
-/* Text beside logo */
-footer .columns:nth-of-type(2) p {
+/* Text */
+footer .footer-block > .section:nth-of-type(2) p {
   margin: 0;
   color: #ffffff;
   font-size: 14px;
@@ -69,19 +79,19 @@ footer .columns:nth-of-type(2) p {
 
 /* Desktop spacing */
 @media (min-width: 900px) {
-  footer .columns:nth-of-type(2) > div {
+  footer .footer-block > .section:nth-of-type(2) .columns-wrapper {
     padding: 40px 32px;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  footer .columns:nth-of-type(2) .columns {
+  footer .footer-block > .section:nth-of-type(2) .columns {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  footer .columns:nth-of-type(2) img {
+  footer .footer-block > .section:nth-of-type(2) .columns-img-col img {
     max-width: 64px;
   }
 }
