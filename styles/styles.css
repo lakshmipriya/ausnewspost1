@@ -262,6 +262,10 @@ main img {
   width: 100%;
 }
 
+main{
+  background-color: #f2f2f2;
+}
+
 /* sections */
 main > .section {
   margin: 40px 0;
