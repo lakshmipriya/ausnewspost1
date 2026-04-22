@@ -6,7 +6,7 @@ footer {
   padding: 0;
 }
 
-/* Footer inner container (EDS default) */
+/* Footer inner wrapper (EDS default) */
 footer .footer > div {
   margin: 0;
   padding: 40px 24px;
@@ -17,25 +17,30 @@ footer .footer > div {
 footer .columns {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 24px;
-  box-sizing: border-box;
 }
 
 /* Image column */
 footer .columns-img-col {
   flex: 0 0 auto;
+  max-width: 96px;
   display: flex;
   align-items: center;
 }
 
-footer .columns-img-col img {
-  max-height: 48px;
+/* Image sizing */
+footer img {
   width: auto;
+  max-width: 92px;
+  height: auto;
+  display: block;
 }
 
 /* Text column */
 footer .columns > div:not(.columns-img-col) {
-  flex: 1;
+  flex: 1 1 auto;
+  text-align: left;
 }
 
 /* Text */
@@ -43,7 +48,6 @@ footer p {
   margin: 0;
   font-size: 12px;
   line-height: 1.6;
-  text-align: left;
 }
 
 /* Desktop spacing */
@@ -60,7 +64,7 @@ footer p {
     align-items: flex-start;
   }
 
-  footer .columns-img-col img {
-    max-height: 40px;
+  footer img {
+    max-width: 80px;
   }
 }
