@@ -1,75 +1,87 @@
-/* Footer base */
+/* ---------------- Base footer ---------------- */
 footer {
-  background: #30303c;
-  color: #fff;
+  background: #ffffff;
+  color: #30303c;
   font-size: var(--body-font-size-xs);
 }
 
-/* Inner footer container (matches original site width) */
+/* Constrain footer content */
 footer .footer > div {
-  max-width: 900px;               /* ✅ aligns with original */
-  /* margin: 0 auto; */
-  padding: 40px 24px;
+  max-width: 1240px;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* Columns layout */
-footer .columns {
+/* ---------------- COPYRIGHT ROW ---------------- */
+/* FIRST columns block stays normal */
+footer .columns:first-of-type {
+  padding: 24px;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer .columns:first-of-type a {
+  color: #d40000;
+  text-decoration: underline;
+}
+
+/* ---------------- ACKNOWLEDGEMENT ROW ---------------- */
+/* SECOND columns block — force layout */
+footer .columns:nth-of-type(2) {
+  background: #30303c;
+}
+
+footer .columns:nth-of-type(2) > div {
+  padding: 40px 24px;
+}
+
+footer .columns:nth-of-type(2) .columns {
   display: flex;
-  align-items: center;             /* ✅ vertical centering */
-  justify-content: flex-start;     /* ✅ keep text LEFT */
+  align-items: center;
+  justify-content: flex-start;
   gap: 24px;
 }
 
-/* Logo column — HARD STOP */
-footer .columns-img-col {
-  flex: 0 0 72px;                  /* ✅ prevents expansion */
+/* Logo column (even though markup says 1-col) */
+footer .columns:nth-of-type(2) .columns-img-col {
+  flex: 0 0 72px;
   max-width: 72px;
   display: flex;
   align-items: center;
 }
 
-/* Logo image — HARD LIMIT */
-footer .columns-img-col img {
-  width: auto;
-  max-width: 72px;                 /* ✅ exact visual size */
+/* Lock logo size */
+footer .columns:nth-of-type(2) img {
+  max-width: 72px;
   height: auto;
+  width: auto;
   display: block;
 }
 
-/* Text column */
-footer .columns > div:not(.columns-img-col) {
-  flex: 1;
-  text-align: left;
-}
-
-/* Text */
-footer p {
+/* Text beside logo */
+footer .columns:nth-of-type(2) p {
   margin: 0;
-  font-size: 12px;                 /* ✅ matches original */
+  color: #ffffff;
+  font-size: 14px;
   line-height: 1.6;
   text-align: left;
 }
 
 /* Desktop spacing */
 @media (min-width: 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .columns:nth-of-type(2) > div {
+    padding: 40px 32px;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  footer .columns {
+  footer .columns:nth-of-type(2) .columns {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  footer .columns-img-col {
-    max-width: 64px;
-  }
-
-  footer .columns-img-col img {
+  footer .columns:nth-of-type(2) img {
     max-width: 64px;
   }
 }
