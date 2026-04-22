@@ -26,9 +26,12 @@ footer p {
 }
 
 footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 40px 24px;
+
 }
 
 footer .footer p {
