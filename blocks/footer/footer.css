@@ -1,95 +1,66 @@
+/* Footer base */
 footer {
-    background: #30303c;
-    padding: 0px;
-    color: #fff;
-     font-size: var(--body-font-size-xs);
+  background: #30303c;
+  color: #fff;
+  font-size: var(--body-font-size-xs);
+  padding: 0;
 }
 
-footer {
-    display: flex;
-    align-items: left;
-    /* flex-wrap: wrap; */
-}
-
-footer img {
-    max-width: 5.75rem;
-    margin: 0 auto 1rem;
-}
-
-footer p {
-    width: 100%;
-    max-width: none;
-    text-align: left;
-    font-size: 75%;
-}
-
+/* Footer inner container (EDS default) */
 footer .footer > div {
-  
-  width: 100%;
-  max-width: none;
   margin: 0;
   padding: 40px 24px;
-
+  box-sizing: border-box;
 }
 
-footer .footer p {
-  margin: 0;
-}
-
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
-}
-
-/* Footer background */
-.footer-wrapper {
-  background-color: #2f2f3a;
-  color: #ffffff;
-}
-
-/* Center footer content */
-.footer-wrapper .columns {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px 32px;
-
+/* Columns layout */
+footer .columns {
   display: flex;
-  align-items: left;
+  align-items: center;
   gap: 24px;
+  box-sizing: border-box;
 }
 
 /* Image column */
-.footer-wrapper .columns-img-col {
+footer .columns-img-col {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
 }
 
-.footer-wrapper .columns-img-col img {
+footer .columns-img-col img {
   max-height: 48px;
   width: auto;
 }
 
 /* Text column */
-.footer-wrapper .columns > div:not(.columns-img-col) {
+footer .columns > div:not(.columns-img-col) {
   flex: 1;
 }
 
-.footer-wrapper p {
+/* Text */
+footer p {
   margin: 0;
   font-size: 12px;
   line-height: 1.6;
-  color: #ffffff;
+  text-align: left;
 }
+
+/* Desktop spacing */
+@media (min-width: 900px) {
+  footer .footer > div {
+    padding: 40px 32px 24px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  .footer-wrapper .columns {
+  footer .columns {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .footer-wrapper .columns-img-col img {
+  footer .columns-img-col img {
     max-height: 40px;
   }
 }
-
