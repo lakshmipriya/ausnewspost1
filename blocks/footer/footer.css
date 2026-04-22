@@ -7,8 +7,8 @@ footer {
 
 /* Inner footer container (matches original site width) */
 footer .footer > div {
-  max-width: 1000px;               /* ✅ aligns with original */
-  margin: 0 auto;
+  max-width: 900px;               /* ✅ aligns with original */
+  /* margin: 0 auto; */
   padding: 40px 24px;
   box-sizing: border-box;
 }
