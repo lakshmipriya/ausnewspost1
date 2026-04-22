@@ -164,7 +164,6 @@ a:any-link {
 
 a:hover {
   color: var(--link-hover-color);
-  text-decoration: underline;
 }
 
 /* buttons */
@@ -218,7 +217,7 @@ h4 a:any-link {
 }
 
 h4 a:any-link:hover {
-   text-decoration: underline;
+   color: var(--link-hover-color);
 }
 
 h4 a.button {
@@ -226,6 +225,11 @@ h4 a.button {
   color: var( --dark-color);
   text-decoration: none;
   cursor: pointer;
+}
+
+main{
+  width: 95%;
+  margin: auto;
 }
 
 main img {
@@ -252,7 +256,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
   padding: 0 24px;
 }
