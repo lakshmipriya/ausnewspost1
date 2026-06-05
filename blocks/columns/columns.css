@@ -19,8 +19,8 @@
 .columns > div > .columns-img-col img {
   display: block;
 }
-.columns-3-cols > div > div:first-child h2,
-.columns-3-cols > div > div:first-child p:not(.button-container) {
+.redleft > div > div:first-child h2,
+.redleft > div > div:first-child p:not(.button-container) {
   border-left: 4px solid red;
   padding-left: 16px;
 }
