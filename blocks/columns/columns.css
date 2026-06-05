@@ -25,6 +25,12 @@
   padding-left: 16px;
 }
 
+.redleft h2,
+.redleft p:not(.button-container) {
+  border-left: 4px solid red;
+  padding-left: 16px;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
