@@ -1,20 +1,163 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
+.columns > div {
+  display: flex;
+  flex-direction: column;
+}
 
-/**
- * loads and decorates the footer
- * @param {Element} block The footer block element
- */
-export default async function decorate(block) {
-  // load footer as fragment
-  const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
-  const fragment = await loadFragment(footerPath);
+.columns img {
+  width: 100%;
+}
 
-  // decorate footer DOM
-  block.textContent = '';
-  const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+.columns > div > div {
+  order: 1;
+}
 
-  block.append(footer);
+.columns > div > .columns-img-col {
+  order: 0;
+}
+
+.columns > div > .columns-img-col img {
+  display: block;
+}
+
+.columns-container {
+  position: relative;
+}
+
+.columns-container .herooverlap {
+  position: absolute;
+  top: -473px;
+  right: 75px;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.herooverlap > div {
+  padding: 24px 24px 24px 0;
+}
+
+.herooverlap > div > div:first-child {
+  margin-left: 24px;
+}
+
+.herooverlap > div {
+  background: #fff;
+  border-radius: 12px;
+}
+
+.herooverlap > div > div:first-child {
+  border-left: 2px solid #e30613;
+  padding-left: 16px;
+}
+
+.columns-container .redleft > div > div:first-child {
+  border-left: 2px solid #e30613;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-container .redleft > div {
+  align-items: flex-start;
+}
+
+/* Ensure button is untouched */
+.herooverlap .button {
+  border: none;
+}
+
+/* ===== 3 COLUMN LAYOUT BASE ===== */
+.columns.redleft.columns-3-cols > div {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* ===== KEEP OTHER COLUMNS NORMAL ===== */
+.columns.redleft.columns-3-cols > div > div {
+  flex: 1;
+}
+
+/* ===== IMAGE (MIDDLE COLUMN) ===== */
+.columns.redleft.columns-3-cols .columns-img-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ===== ✅ FIXED 3RD COLUMN ONLY ===== */
+.columns.redleft.columns-3-cols > div > div:last-child {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5; /* full light border */
+}
+
+/* title */
+.columns.redleft.columns-3-cols > div > div:last-child strong {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+/* table full width */
+.columns.redleft.columns-3-cols > div > div:last-child table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* row divider lines */
+.columns.redleft.columns-3-cols > div > div:last-child tr {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.columns.redleft.columns-3-cols > div > div:last-child tr:last-child {
+  border-bottom: none;
+}
+
+/* row layout */
+.columns.redleft.columns-3-cols > div > div:last-child td {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* left icon */
+.columns.redleft.columns-3-cols > div > div:last-child td::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url('/icons/external-link.svg') no-repeat center;
+  background-size: contain;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+/* right arrow */
+.columns.redleft.columns-3-cols > div > div:last-child td::after {
+  content: "›";
+  color: #e31837;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+/* hover */
+.columns.redleft.columns-3-cols > div > div:last-child td:hover {
+  color: #e31837;
+}
+
+@media (width >= 900px) {
+  .columns > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .columns > div > div {
+    flex: 1;
+    order: unset;
+  }
 }
