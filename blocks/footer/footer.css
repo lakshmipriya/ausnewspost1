@@ -1,14 +1,29 @@
 /* Footer base */
 footer {
-  background: #30303c;
-  color: #fff;
   font-size: var(--body-font-size-xs);
 }
 
-/* Inner footer container (matches original site width) */
-footer .footer > div {
-  max-width: 900px;               /* ✅ aligns with original */
-  /* margin: 0 auto; */
+/* ✅ Make sections FULL WIDTH */
+footer .footer > div > .section {
+  width: 100%;
+}
+
+/* ✅ First row (white full width) */
+footer .footer > div > .section:first-of-type {
+  background: #fff;
+  color: #000;
+}
+
+/* ✅ Second row (black full width) */
+footer .footer > div > .section:last-of-type {
+  background: #30303c;
+  color: #fff;
+}
+
+/* ✅ CONTENT WRAPPER (center content only, not background) */
+footer .footer > div > .section > .columns-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
   padding: 40px 24px;
   box-sizing: border-box;
 }
@@ -16,23 +31,23 @@ footer .footer > div {
 /* Columns layout */
 footer .columns {
   display: flex;
-  align-items: center;             /* ✅ vertical centering */
-  justify-content: flex-start;     /* ✅ keep text LEFT */
+  align-items: center;
+  justify-content: flex-start;
   gap: 24px;
 }
 
-/* Logo column — HARD STOP */
+/* Logo column */
 footer .columns-img-col {
-  flex: 0 0 72px;                  /* ✅ prevents expansion */
+  flex: 0 0 72px;
   max-width: 72px;
   display: flex;
   align-items: center;
 }
 
-/* Logo image — HARD LIMIT */
+/* Logo image */
 footer .columns-img-col img {
   width: auto;
-  max-width: 72px;                 /* ✅ exact visual size */
+  max-width: 72px;
   height: auto;
   display: block;
 }
@@ -46,14 +61,14 @@ footer .columns > div:not(.columns-img-col) {
 /* Text */
 footer p {
   margin: 0;
-  font-size: 12px;                 /* ✅ matches original */
+  font-size: 12px;
   line-height: 1.6;
   text-align: left;
 }
 
-/* Desktop spacing */
+/* Desktop */
 @media (min-width: 900px) {
-  footer .footer > div {
+  footer .footer > div > .section > .columns-wrapper {
     padding: 40px 32px 24px;
   }
 }
